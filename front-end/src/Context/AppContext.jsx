@@ -6,6 +6,11 @@ import { createContext, useState } from "react";
 export const AppContext = createContext(null)
 export const AppContextProvider = (props) => {
   const [theme, setTheme] = useState("light")
+  const [searchFilter, setSearchFilter] = useState({
+    title: '',
+    location: ''
+  })
+  const [isSearched, setIsSearched] = useState(false)
 
   const toggleTheme = () => {
     setTheme ((prevTheme) => (prevTheme === "light" ? "dark" : "light"))
@@ -15,7 +20,9 @@ export const AppContextProvider = (props) => {
   // allow to share date across all components without having to pass props down
   const value = {
     theme,
-    toggleTheme
+    toggleTheme,
+    setSearchFilter, searchFilter,
+    isSearched, setIsSearched
 
   }
     return(

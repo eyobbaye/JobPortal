@@ -25,7 +25,7 @@ const Header = () => {
                 <img
                   src="/hidasietelecom.png"
                   alt="Hidasietelecom secondary logo"
-                  w
+                  onClick={() => navigate('/')}
                 />
               </div>
               <span className="text-xl font-bold text-gray-950">JobPoral</span>
