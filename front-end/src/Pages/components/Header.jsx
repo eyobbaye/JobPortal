@@ -13,7 +13,7 @@ const Header = () => {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="flex top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100"
+      className="flex sticky shadow-md top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100"
     >
      
         <div className="container mx-auto px-4">
@@ -58,7 +58,7 @@ const Header = () => {
             <div className="flex items-center space-x-3">
               {isAuthenticated ? (
                 <div className="flex items-center space-x-3">
-                  <span className="text-[#044288]">
+                  <span className="text-[#044288] max-sm:hidden">
                     Welcome, {user?.fullName}{" "}
                   </span>
                   <a

@@ -1,16 +1,18 @@
 // single context for the project
 // Logic and API call
 
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
+import { jobsData } from "../assets/assets";
 
-export const AppContext = createContext(null)
+export const AppContext = createContext(null);
 export const AppContextProvider = (props) => {
   const [theme, setTheme] = useState("light")
   const [searchFilter, setSearchFilter] = useState({
     title: '',
     location: ''
   })
-  const [isSearched, setIsSearched] = useState(false)
+  const [isSearched, setIsSearched] = useState(false);
+  const [jobs, setJobs] = useState([]);
 
   const toggleTheme = () => {
     setTheme ((prevTheme) => (prevTheme === "light" ? "dark" : "light"))
@@ -22,9 +24,19 @@ export const AppContextProvider = (props) => {
     theme,
     toggleTheme,
     setSearchFilter, searchFilter,
-    isSearched, setIsSearched
+    isSearched, setIsSearched,
+    setJobs, jobs
 
   }
+  // Fech jobs data function
+  const fetchJobs = async () => {
+    setJobs(jobsData)
+    
+  }
+  useEffect(() => {
+    fetchJobs();
+    
+  }, [])
     return(
 
       <AppContext.Provider value={value} >
