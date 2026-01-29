@@ -5,22 +5,32 @@ function JobCard({job}) {
   return (
     <>
       <div className=" border-zinc-500 p-6 inset-shadow-sm bg-white shadow-md rounded-xl">
-        <div className=''>
-          <div className="flex justify-between items-center">
-            <img className="h-26" src={assets.company_icon} alt="" />
-          </div>
-          <h4 className="font-medium text-xl mt-2">{job.catagory}</h4>
-          <div className="flex items-center gap-3 mt-2 text-xs">
+        <div className="">
+          <div className="gap-3 mt-2 text-xs">
+            <span className="bg-blue-100 border border-blue-50 rounded-full px-4 py-0.5 text-gray-600 text-center">
+              {job.category}
+            </span>
             <span className="bg-blue-100 border border-blue-50 rounded-full px-4 py-0.5 text-gray-600 text-center">
               {job.level}
             </span>
           </div>
-          <h1 className="mt-4 text-gray-900 font-medium text-2xl">
-            {job.title}
-          </h1>
+          <div className="flex">
+            <h1 className="mt-4 text-gray-900 font-medium text-2xl">
+              {job.title}
+            </h1>
+            <div className="flex justify-between items-center">
+              <img className="h-26" src={assets.company_icon} alt="" />
+            </div>
+          </div>
+          {/* <span className="bg-amber-50 border border-blue-50 rounded-full px-4 py-0.5 text-gray-600 text-center text-sm">
+            {job.location}
+          </span> */}
+
           <p
             className="text-gray-800 pt-4 text-sm"
-            dangerouslySetInnerHTML={{ __html: job.description.slice(0, 100) }}
+            dangerouslySetInnerHTML={{
+              __html: job.description.slice(0, 100),
+            }}
           ></p>
         </div>
         <div className="mt-4 flex gap-4 text-sm">

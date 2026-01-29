@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Header from '../Pages/components/Header';
 import JobSearchHero from './JobSearchHero';
 import { AppContext } from '../Context/AppContext';
@@ -7,12 +7,39 @@ import { JobCategories } from "../assets/assets";
 import JobCard from './JobCard';
 
 function Jobs() {
-    const { isSearched, searchFilter, setSearchFilter, jobs} =
-    useContext(AppContext); 
+  const { isSearched, searchFilter, setSearchFilter, jobs } =
+    useContext(AppContext);
   const [showFilter, setShowFilter] = useState(false);
-  const [currentPage, setCurrentPage] = useState(2)
-  const [isFlex, setIsFlex] = useState(false)
-  
+  const [currentPage, setCurrentPage] = useState(2);
+  const [isFlex, setIsFlex] = useState(false);
+  const [selectedCatagories, setSelectedCatagories] = useState([]);
+  const [filterJobs, setFilterJobs] = useState(jobs);
+
+  const handleCheckboxChange = (catagory) => {
+    setSelectedCatagories((prev) =>
+      prev.includes(catagory)
+        ? prev.filter((c) => !c == catagory) //Remove
+        : [...prev, catagory], //Add
+    );
+  };
+  //  Filtered Logic
+  useEffect(() => {
+
+    const machCatagory = (jobs) =>
+      selectedCatagories.length === 0 ||
+      selectedCatagories.includes(jobs.category);
+    // search filter
+    const matchsTitle = job => searchFilter.title === "" || job.title.toLowerCase().includes(searchFilter.title.toLowerCase());
+    //display the fikterd jobs in order.
+    const newFilterdJobs = jobs.slice().reverse().filter(
+      job => machCatagory(job) && matchsTitle(job)
+    )
+    setFilterJobs(newFilterdJobs)
+    // make the current page 1 after filter
+    setCurrentPage(1)
+    
+  },[jobs,selectedCatagories,searchFilter])
+
   return (
     <>
       <Header />
@@ -55,10 +82,14 @@ function Jobs() {
           <div className={showFilter ? "" : "max-lg:hidden"}>
             <h4 className="font-medium text-lg py-4">Search by Catagories</h4>
             <ul className="space-y-4 text-gray-600">
-              {JobCategories.map((catagory, index) => (
+              {JobCategories.map((category, index) => (
                 <li key={index} className="flex gap-3 items-center">
-                  <input type="checkbox" name="" id="" />
-                  {catagory}
+                  <input
+                    type="checkbox"
+                    onChange={() => handleCheckboxChange(category)}
+                    checked={selectedCatagories.includes(category)}
+                  />
+                  {category}
                 </li>
               ))}
             </ul>
@@ -71,7 +102,7 @@ function Jobs() {
             <h3 id="job-list" className="font-medium text-3xl py-2 mb-4">
               Latest Jobs
             </h3>
-            <div className='flex gap-2'>
+            <div className="flex gap-2">
               <LayoutGrid
                 onClick={() => setIsFlex(!isFlex)}
                 className="mb-4 w-6 h-6 rounded"
@@ -89,15 +120,17 @@ function Jobs() {
             }
           >
             {/* render job list with pagination  using .slice()*/}
+            {/* filter jobs using filterJobs */}
 
-            {jobs
+            {filterJobs
               .slice((currentPage - 1) * 6, currentPage * 6)
               .map((job, index) => (
                 <JobCard key={index} job={job} />
               ))}
           </div>
           {/* Jobs pagination */}
-          {jobs.length > 0 && (
+          {/* sync the pagination number with filtered jobs with filtersJobs rather than jobs. */}
+          {filterJobs.length > 0 && (
             <div className="flex items-center justify-center space-x-3 mt-4">
               <a href="#job-list">
                 {/* pagination for left arrow icon */}
@@ -107,7 +140,7 @@ function Jobs() {
                 />
               </a>
               {/* pagination 6 cards of job list */}
-              {Array.from({ length: Math.ceil(jobs.length / 6) }).map(
+              {Array.from({ length: Math.ceil(filterJobs.length / 6) }).map(
                 (_, index) => (
                   <a href="#job-list">
                     {/* numbers of page */}
