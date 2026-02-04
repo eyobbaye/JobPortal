@@ -5,6 +5,7 @@ import { AppContext } from '../Context/AppContext';
 import { X, CircleArrowLeft, CircleArrowRight, LayoutGrid } from "lucide-react";
 import { JobCategories } from "../assets/assets";
 import JobCard from './JobCard';
+import Footer from '../Pages/components/Footer';
 
 function Jobs() {
   const { isSearched, searchFilter, setSearchFilter, jobs } =
@@ -169,6 +170,7 @@ function Jobs() {
           )}
         </section>
       </div>
+      <Footer />
     </>
   );
 }

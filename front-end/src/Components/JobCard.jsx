@@ -1,7 +1,10 @@
 import React from 'react'
 import { assets } from "../assets/assets";
+import { Navigate, useNavigate } from 'react-router-dom';
 
-function JobCard({job}) {
+function JobCard({ job }) {
+  // navigate const to navigate to the page
+  const navigate = useNavigate()
   return (
     <>
       <div className=" border-zinc-500 p-6 inset-shadow-sm bg-white shadow-md rounded-xl">
@@ -34,10 +37,10 @@ function JobCard({job}) {
           ></p>
         </div>
         <div className="mt-4 flex gap-4 text-sm">
-          <button className="bg-linear-to-r from-[#04336af7] to-[#084e9df7] text-white px-8 py-2 rounded-full hover:border-gray-300 hover:bg-gray-50 transition-all duration-300">
+          <button onClick={()=> {navigate(`/apply-job/${job._id}`); scrollTo(0,0)}} className="bg-linear-to-r from-[#04336af7] to-[#084e9df7] text-white px-8 py-2 rounded-full hover:border-gray-300 hover:bg-gray-50 transition-all duration-300">
             View Job
           </button>
-          <button className="bg-amber-400 border-2 border-gray-200 text-gray-700 px-8 py-2 rounded-full  hover:border-gray-300 hover:bg-gray-50 transition-all duration-300 shadow-sm hover:shadow-md">
+          <button onClick={()=> {navigate(`/apply-job/${job._id}`); scrollTo(0,0)}} className="bg-amber-400 border-2 border-gray-200 text-gray-700 px-8 py-2 rounded-full  hover:border-gray-300 hover:bg-gray-50 transition-all duration-300 shadow-sm hover:shadow-md">
             Applay
           </button>
         </div>

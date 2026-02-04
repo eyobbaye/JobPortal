@@ -1,5 +1,5 @@
 import logo from "./logo.svg";
-import company_icon from "../assets/hidasie.jpg";
+import company_icon from "../assets/hidasie.png";
 import profile_img from "./profile_img.png";
 
 export const assets = {
