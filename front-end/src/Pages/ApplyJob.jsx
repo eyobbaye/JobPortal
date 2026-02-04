@@ -72,7 +72,7 @@ function ApplyJob() {
             </div>
           </div>
           <div className="flex flex-col lg:flex-row justify-between items-start">
-            <div className="w-full lg:w-2/4">
+            <div className="w-full lg:w-2/3">
               <h2 className="font-bold text-2xl text-[#04336af7] pl-4">
                 Job Description
               </h2>
@@ -85,11 +85,11 @@ function ApplyJob() {
               </button>
             </div>
             {/* Right Section related job */}
-            <div className='w-full lg:w-1/3 mt-8 lg:mt-0 space-y-5'>
+            <div className='w-full lg:w-1/4 mt-8 lg:mt-0 space-y-5 mr-12'>
               <h2>
                 Related <em className='text-blue-950'>{jobData.category}</em> jobs
               </h2>
-              {jobs.filter(job=> job._id !== jobData._id && job.category === jobData.category).slice(0,3).map((job,index)=> <JobCard key={index} job={job} />)}
+              {jobs.filter(job=> job._id !== jobData._id && job.category === jobData.category).slice(0,2).map((job,index)=> <JobCard key={index} job={job} />)}
             </div>
           </div>
         </div>
