@@ -98,8 +98,8 @@ export const jobsData = [
     level: "Senior Level",
     companyId: {
       _id: "670e4d25ca9fda8f1bf359b9",
-      name: "Slack",
-      email: "slack@demo.com",
+      name: "Hidasietelecom",
+      email: "info@hidasietelecom.et",
       image: company_icon,
     },
     description: `
@@ -131,8 +131,8 @@ export const jobsData = [
     level: "Intermediate Level",
     companyId: {
       _id: "670e4d25ca9fda8f1bf359b9",
-      name: "Slack",
-      email: "slack@demo.com",
+      name: "Hidasietelecom",
+      email: "info@hidasietelecom.et",
       image: company_icon,
     },
     description: `
@@ -164,8 +164,8 @@ export const jobsData = [
     level: "Beginner Level",
     companyId: {
       _id: "670e4d25ca9fda8f1bf359b9",
-      name: "Slack",
-      email: "slack@demo.com",
+      name: "Hidasietelecom",
+      email: "info@hidasietelecom.et",
       image: company_icon,
     },
     description: `
@@ -197,8 +197,8 @@ export const jobsData = [
     level: "Senior Level",
     companyId: {
       _id: "670e4d25ca9fda8f1bf359b9",
-      name: "Slack",
-      email: "slack@demo.com",
+      name: "Hidasietelecom",
+      email: "info@hidasietelecom.et",
       image: company_icon,
     },
     description: `
@@ -230,8 +230,8 @@ export const jobsData = [
     level: "Intermediate Level",
     companyId: {
       _id: "670e4d25ca9fda8f1bf359b9",
-      name: "Slack",
-      email: "slack@demo.com",
+      name: "Hidasietelecom",
+      email: "info@hidasietelecom.et",
       image: company_icon,
     },
     description: `
@@ -263,8 +263,8 @@ export const jobsData = [
     level: "Senior Level",
     companyId: {
       _id: "670e4d25ca9fda8f1bf359b9",
-      name: "Slack",
-      email: "slack@demo.com",
+      name: "Hidasietelecom",
+      email: "info@hidasietelecom.et",
       image: company_icon,
     },
     description: `
@@ -296,8 +296,8 @@ export const jobsData = [
     level: "Senior Level",
     companyId: {
       _id: "670e4d25ca9fda8f1bf359b9",
-      name: "Slack",
-      email: "slack@demo.com",
+      name: "Hidasietelecom",
+      email: "info@hidasietelecom.et",
       image: company_icon,
     },
     description: `
@@ -329,8 +329,8 @@ export const jobsData = [
     level: "Intermediate Level",
     companyId: {
       _id: "670e4d25ca9fda8f1bf359b9",
-      name: "Slack",
-      email: "slack@demo.com",
+      name: "Hidasietelecom",
+      email: "info@hidasietelecom.et",
       image: company_icon,
     },
     description: `
@@ -362,8 +362,8 @@ export const jobsData = [
     level: "Senior Level",
     companyId: {
       _id: "670e4d25ca9fda8f1bf359b9",
-      name: "Slack",
-      email: "slack@demo.com",
+      name: "Hidasietelecom",
+      email: "info@hidasietelecom.et",
       image: company_icon,
     },
     description: `
@@ -395,8 +395,8 @@ export const jobsData = [
     level: "Intermediate Level",
     companyId: {
       _id: "670e4d25ca9fda8f1bf359b9",
-      name: "Slack",
-      email: "slack@demo.com",
+      name: "Hidasietelecom",
+      email: "info@hidasietelecom.et",
       image: company_icon,
     },
     description: `
@@ -428,8 +428,8 @@ export const jobsData = [
     level: "Intermediate Level",
     companyId: {
       _id: "670e4d25ca9fda8f1bf359b9",
-      name: "Slack",
-      email: "slack@demo.com",
+      name: "Hidasietelecom",
+      email: "info@hidasietelecom.et",
       image: company_icon,
     },
     description: `
@@ -461,8 +461,8 @@ export const jobsData = [
     level: "Intermediate Level",
     companyId: {
       _id: "670e4d25ca9fda8f1bf359b9",
-      name: "Slack",
-      email: "slack@demo.com",
+      name: "Hidasietelecom",
+      email: "info@hidasietelecom.et",
       image: company_icon,
     },
     description: `
@@ -494,8 +494,8 @@ export const jobsData = [
     level: "Beginner Level",
     companyId: {
       _id: "670e4d25ca9fda8f1bf359b9",
-      name: "Slack",
-      email: "slack@demo.com",
+      name: "Hidasietelecom",
+      email: "info@hidasietelecom.et",
       image: company_icon,
     },
     description: `
@@ -527,8 +527,8 @@ export const jobsData = [
     level: "Senior Level",
     companyId: {
       _id: "670e4d25ca9fda8f1bf359b9",
-      name: "Slack",
-      email: "slack@demo.com",
+      name: "Hidasietelecom",
+      email: "info@hidasietelecom.et",
       image: company_icon,
     },
     description: `
@@ -560,8 +560,8 @@ export const jobsData = [
     level: "Intermediate Level",
     companyId: {
       _id: "670e4d25ca9fda8f1bf359b9",
-      name: "Slack",
-      email: "slack@demo.com",
+      name: "Hidasietelecom",
+      email: "info@hidasietelecom.et",
       image: company_icon,
     },
     description: `
@@ -593,8 +593,8 @@ export const jobsData = [
     level: "Senior Level",
     companyId: {
       _id: "670e4d25ca9fda8f1bf359b9",
-      name: "Slack",
-      email: "slack@demo.com",
+      name: "Hidasietelecom",
+      email: "info@hidasietelecom.et",
       image: company_icon,
     },
     description: `
@@ -626,8 +626,8 @@ export const jobsData = [
     level: "Senior Level",
     companyId: {
       _id: "670e4d25ca9fda8f1bf359b9",
-      name: "Slack",
-      email: "slack@demo.com",
+      name: "Hidasietelecom",
+      email: "info@hidasietelecom.et",
       image: company_icon,
     },
     description: `
@@ -659,8 +659,8 @@ export const jobsData = [
     level: "Intermediate Level",
     companyId: {
       _id: "670e4d25ca9fda8f1bf359b9",
-      name: "Slack",
-      email: "slack@demo.com",
+      name: "Hidasietelecom",
+      email: "info@hidasietelecom.et",
       image: company_icon,
     },
     description: `
@@ -692,8 +692,8 @@ export const jobsData = [
     level: "Senior Level",
     companyId: {
       _id: "670e4d25ca9fda8f1bf359b9",
-      name: "Slack",
-      email: "slack@demo.com",
+      name: "Hidasietelecom",
+      email: "info@hidasietelecom.et",
       image: company_icon,
     },
     description: `
@@ -725,8 +725,8 @@ export const jobsData = [
     level: "Intermediate Level",
     companyId: {
       _id: "670e4d25ca9fda8f1bf359b9",
-      name: "Slack",
-      email: "slack@demo.com",
+      name: "Hidasietelecom",
+      email: "info@hidasietelecom.et",
       image: company_icon,
     },
     description: `
@@ -759,7 +759,7 @@ export const jobsData = [
     companyId: {
       _id: "670e4d25ca9fda8f1bf359b9",
       name: "Hidaisetelecom",
-      email: "slack@demo.com",
+      email: "info@hidasietelecom.et",
       image: company_icon,
     },
     description: `
@@ -782,7 +782,7 @@ export const jobsData = [
         </ol>`,
     salary: 123000,
     date: 1729681667114,
-    category: "Programming",
+    category: "Information Technology",
   },
   {
     _id: "22",
@@ -815,7 +815,7 @@ export const jobsData = [
         </ol>`,
     salary: 8000,
     date: 1729681667114,
-    category: "Cybersecurity",
+    category: "Information Technology",
   },
   {
     _id: "23",
@@ -824,8 +824,8 @@ export const jobsData = [
     level: "Intermediate Level",
     companyId: {
       _id: "670e4d25ca9fda8f1bf359b9",
-      name: "Slack",
-      email: "slack@demo.com",
+      name: "Hidasietelecom",
+      email: "info@hidasietelecom.et",
       image: company_icon,
     },
     description: `
@@ -848,6 +848,8 @@ export const jobsData = [
         </ol>`,
     salary: 102000,
     date: 1729681667114,
-    category: "Programming",
+    category: "Information Technology",
   },
 ];
+
+

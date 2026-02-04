@@ -17,3 +17,102 @@
 body {
   background-color: rgba(235, 231, 231, 0.24);
 }
+:root{
+  --accent: #04336af7; /* blue-600 */
+  --accent-befor:#FBBF24;
+  --muted: #6b7280;  /* gray-500 */
+  /* --text: #111827;   gray-900 */
+  --text:#04336af7;
+  --bg: #ffffff;
+}
+
+.job-description{
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  max-width: 820px;
+  margin: 1.25rem auto;
+  padding: 1.25rem 1.5rem;
+  border-radius: 10px;
+  /* box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06); */
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+/* Paragraph */
+.job-description p{
+  margin: 0 0 1rem;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+/* Section title */
+.job-description h2{
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  margin: 1rem 0 .5rem;
+  font-size: 1.02rem;
+  color: var(--text);
+  letter-spacing: .2px;
+}
+
+/* small accent bar for headings */
+.job-description h2::before{
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 18px;
+  background: var(--accent-befor);
+  border-radius: 2px;
+  transform: translateY(-1px);
+}
+
+/* Strong inside headings */
+.job-description h2 strong{
+  font-weight: 600;
+}
+
+/* Ordered lists */
+.job-description ol{
+  margin: 0 0 1rem 0;
+  padding-left: 1rem;
+  counter-reset: item;
+}
+
+/* Custom numeric marker with accent */
+.job-description ol li{
+  margin: 0.5rem 0;
+  padding-left: 1.25rem;
+  position: relative;
+  color: var(--muted);
+}
+
+/* Accessible numeric markers */
+.job-description ol li::before{
+  counter-increment: item;
+  content: counter(item) ".";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--accent);
+  font-weight: 700;
+  min-width: 1.1rem;
+  text-align: right;
+}
+
+/* subtle hover to highlight a responsibility/skill */
+.job-description ol li:hover{
+  background: rgba(37,99,235,0.05);
+  border-radius: 6px;
+  padding-left: 1.1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px){
+  .job-description{
+    padding: 1rem;
+  }
+  .job-description h2{ font-size: 0.98rem; }
+  .job-description p{ font-size: 0.98rem; }
+}
